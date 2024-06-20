@@ -1,0 +1,25 @@
+<p-table 
+    [value]="currentBooks"
+    styleClass="p-datatable-striped" 
+    [tableStyle]="{'min-width': '50rem', 'max-width': '90%', 'margin': 'auto'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Pages read</th>
+                <th>Total pages</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-book>
+                <tr (click)="onRowClick(book)">
+                    <td>{{book.title}}</td>
+                    <td>{{book.author}}</td>
+                    <td>{{book.genre}}</td>
+                    <td>{{book.pagesRead}}</td>
+                    <td>{{book.totalPages}}</td>
+                </tr>
+        </ng-template>
+</p-table>
+
+<app-pagination [books]="books" (paginationChange)="onPaginationChanged($event)"></app-pagination>

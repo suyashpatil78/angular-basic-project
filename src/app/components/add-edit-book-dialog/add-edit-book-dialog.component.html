@@ -1,0 +1,54 @@
+<div class="add-edit-dialog">
+    <form [formGroup]="fg">
+        <div class="add-edit-dialog--form-item">
+            <label>Title</label>
+            <input type="text" pInputText formControlName="title" placeholder="Title" />
+            <div *ngIf="isFieldInvalid('title')">
+                <small class="p-error">Title is required</small>
+            </div>
+        </div>
+    
+        <div class="add-edit-dialog--form-item">
+            <label>Author</label>
+            <input type="text" pInputText formControlName="author" placeholder="Author" />
+            <div *ngIf="isFieldInvalid('author')">
+                <small class="p-error">Author is required</small>
+            </div>
+        </div>
+    
+        <div class="add-edit-dialog--form-item">
+            <label>Genre</label>
+            <p-dropdown 
+                [options]="genres" 
+                formControlName="genre" 
+                [style]="{ width: '90%', maxHeight: '36px', alignItems: 'center' }"
+            />
+            <div *ngIf="isFieldInvalid('genre')">
+                <small class="p-error">Genre is required</small>
+            </div>
+        </div>
+
+        <div class="add-edit-dialog--page-section">
+            <div class="add-edit-dialog--form-item">
+                <label>Pages read</label>
+                <p-inputNumber inputId="integeronly" formControlName="pagesRead" />
+                <div *ngIf="isFieldInvalid('pagesRead')">
+                    <small class="p-error">Pages read field is required</small>
+                </div>
+            </div>
+    
+            <div class="add-edit-dialog--form-item">
+                <label>Total Pages</label>
+                <p-inputNumber inputId="integeronly" formControlName="totalPages" />
+                <div *ngIf="isFieldInvalid('totalPages')">
+                    <small class="p-error">Total pages field is required</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="add-edit-dialog--button-container">
+            <p-button label="Save" (onClick)="saveBookClick()" class="add-edit-dialog--button"></p-button>
+        </div>
+        
+    </form>
+</div>

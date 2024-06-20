@@ -1,0 +1,12 @@
+.book-store {
+    &--header,
+    &--footer {
+        text-align: center;
+    }
+
+    &--button {
+        margin: 24px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

@@ -1,0 +1,7 @@
+<p-paginator 
+    (onPageChange)="onPageChange($event)" 
+    [first]="0"
+    [rows]="10" 
+    [totalRecords]="books?.length" 
+    [rowsPerPageOptions]="[10, 20, 50]" 
+/>
