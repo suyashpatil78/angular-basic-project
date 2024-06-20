@@ -17,6 +17,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FiltersComponent } from './components/filters/filters.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PaginationComponent,
     ListViewComponent,
     AddEditBookDialogComponent,
+    FiltersComponent,
   ],
   imports: [
     BrowserModule,

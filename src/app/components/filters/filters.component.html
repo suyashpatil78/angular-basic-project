@@ -1,0 +1,14 @@
+<div class="filters">
+    <div class="filters--search">
+        <input #simpleSearchInput type="text" pInputText [(ngModel)]="searchText" placeholder="Search" [style]="{maxHeight: '36px'}" />
+    </div>
+    <div class="filters--genre">
+        <p-dropdown
+            [options]="genres"
+            [(ngModel)]="selectedGenre"
+            [style]="{ maxHeight: '36px', alignItems: 'center' }"
+            placeholder="Select Genre"
+            (onChange)="onGenreChange($event)"
+        ></p-dropdown>
+    </div>
+</div>
